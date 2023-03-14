@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/*Importando fonte*/
+@font-face {
+    font-family: 'Arsenal';
+    src: url(../fonts/Arsenal/Arsenal-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+
+/*Definindo nomes*/
+:root{
+    --cor0: #000000;
+    --cor01: #FFFFFF;
+    --cor02: #FF0000;
+    --cor03: #800000;
+    --cor04: #400000;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-persona: 'Arsenal';
+}
+
+/*Seletor Universal - Vale pra todos os elementos*/
+*{
+    margin: 1.5px;
+    padding: 1.5px;
+}
+
+/*Definindo configurações*/
+body{
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor04));
+    font-family: var(--fonte-persona);
+}
+
+header{
+    text-align: center;
+    min-height: 100px;
+    padding-top: 15px;
+}
+
+/*O Simbolo de > é de herança*/
+header > h1{
+    font-size: 2.3em;
+    margin-bottom: 7px;
+    text-shadow: 1.5px 2px 2px rgb(255, 255, 255);
+}
+
+header > p{
+    font-size: 1.2em;
+    margin: auto;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.534);
+    font-weight: bold;
+}
+
+main{
+    min-width: 18.75rem;
+    max-width: 62.5rem;
+    margin: auto;
+    margin-bottom: 1.875rem;
+    padding: 40px;
+    color: white;
+    background-color: #1c1c21;
+    box-shadow: 0rem 0rem .625rem rgba(0, 0, 0, 0.411);
+    border-radius: .625rem;
+    
+}
+
+main h2{
+    font-size: 2.3em;
+    text-indent: 8px;
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+main strong{
+    color: white;
+    font-weight: bold;
+}
+
+main a{
+    text-decoration: underline;
+    font-weight: bold;
+    color: white;
+    padding: 2px 6px;
+    
+}
+
+/*Botando um simbolo para links externos após o texto*/
+a.externo::after{
+    content: '\00a0\1F517';
+}
+
+/*Definindo a cor do link quando for passado o mouse em cima*/
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor02);
+}
+
+
+/*Centralizando imagem*/
+main img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+footer{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer a{
+    text-decoration: underline;
+    font-weight: bold;
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor02);
+}
